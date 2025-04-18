@@ -205,21 +205,49 @@
             margin-bottom: 3rem;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .contact-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .contact-info {
             background: var(--light-bg);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 10px;
+            margin-bottom: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-info-item i {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            width: 30px;
         }
 
         .contact-info h3 {
             color: var(--primary-color);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            grid-column: 1 / -1;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .contact-iframe {
+            width: 100%;
+            height: 670px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .cta-button {
@@ -265,6 +293,15 @@
             
             .hero p {
                 font-size: 1rem;
+            }
+
+            .contact-container {
+                padding: 1.5rem;
+            }
+
+            .contact-info {
+                padding: 1.5rem;
+                gap: 1rem;
             }
         }
     </style>
@@ -325,19 +362,43 @@
 
     <section class="contact" id="contact">
         <h2>Contact Us</h2>
-        <div class="contact-grid">
+        <div class="contact-container">
             <div class="contact-info">
                 <h3>Get in Touch</h3>
-                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
-                <p><i class="fas fa-envelope"></i> info@montgomeryinsurance.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, Norristown, PA 19401</p>
+                <div class="contact-info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <p style="font-weight: 600; margin-bottom: 0.25rem;">Phone</p>
+                        <p>(555) 123-4567</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <p style="font-weight: 600; margin-bottom: 0.25rem;">Email</p>
+                        <p>info@montgomeryinsurance.com</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <p style="font-weight: 600; margin-bottom: 0.25rem;">Address</p>
+                        <p>123 Main Street<br>Norristown, PA 19401</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <p style="font-weight: 600; margin-bottom: 0.25rem;">Hours</p>
+                        <p>Mon-Fri: 9AM-5PM<br>Sat: 10AM-2PM</p>
+                    </div>
+                </div>
             </div>
-            <div class="contact-info">
-                <h3>Business Hours</h3>
-                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                <p>Saturday: 10:00 AM - 2:00 PM</p>
-                <p>Sunday: Closed</p>
-            </div>
+            <iframe
+                title="sentient"
+                src="https://realestateagent.ingest.sentientst.com/contact-us" 
+                class="contact-iframe"
+                ></iframe>
         </div>
     </section>
 
